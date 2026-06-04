@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nayara Panjani ❤️ Cinta Abadiku</title>
+    <!-- Google Fonts : Romantis & Elegan -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (Ikon cinta) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 10% 30%, #ffdde1, #f9b5c2);
+            font-family: 'Quicksand', sans-serif;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animasi latar belakang hati jatuh */
+        .heart-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .heart-drop {
+            position: absolute;
+            color: rgba(255, 80, 120, 0.55);
+            font-size: 1.5rem;
+            user-select: none;
+            animation: fall 9s linear infinite;
+            text-shadow: 0 0 3px #ffafc0;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-15vh) rotate(0deg);
+                opacity: 0.8;
+            }
+            80% {
+                opacity: 0.9;
+            }
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Container utama */
+        .love-card {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(255, 248, 245, 0.96);
+            backdrop-filter: blur(4px);
+            border-radius: 70px 70px 80px 80px;
+            box-shadow: 0 35px 55px rgba(160, 50, 80, 0.35), 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 20;
+            transition: all 0.3s ease;
+            border: 1px solid #ffbecf;
+        }
+
+        /* Header mesra */
+        .mesra-header {
+            background: linear-gradient(125deg, #ff7b9c, #ff4d6d);
+            padding: 2.2rem 1.8rem 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        }
+        .mesra-header i {
+            font-size: 3rem;
+            filter: drop-shadow(2px 4px 10px rgba(0,0,0,0.2));
+            animation: pulseHeart 1.4s infinite ease;
+        }
+        @keyframes pulseHeart {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.18); text-shadow: 0 0 8px #fff0f3; }
+            100% { transform: scale(1); }
+        }
+        .mesra-header h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-top: 8px;
+            word-break: keep-all;
+        }
+        .mesra-header h1 span {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .mesra-header .sapaan {
+            font-size: 1.25rem;
+            margin-top: 12px;
+            font-style: italic;
+            background: rgba(255,255,210,0.2);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+        }
+
+        /* Isi utama */
+        .main-content {
+            padding: 2rem 2rem 1.8rem;
+        }
+
+        /* kata cinta mesra langsung */
+        .cinta-utama {
+            background: #fff2f5;
+            border-radius: 48px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 15px 25px rgba(226, 110, 140, 0.2);
+            border-bottom: 6px solid #ff8eab;
+        }
+        .judul-mesra {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #bc3f60;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        .kata-cinta-besar {
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: #d43f65;
+            line-height: 1.45;
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+            background: #ffeef2;
+            padding: 18px 12px;
+            border-radius: 60px;
+        }
+        .kata-cinta-besar .big-text {
+            font-size: 2rem;
+            display: inline-block;
+            margin: 0 5px;
+            animation: gentleGlow 2s infinite;
+        }
+        @keyframes gentleGlow {
+            0% { text-shadow: 0 0 0 #ff96b3; }
+            50% { text-shadow: 0 0 8px #ff96b3; color:#e0456e; }
+            100% { text-shadow: 0 0 0 #ff96b3; }
+        }
+        .pelukan-virtual {
+            font-size: 1.1rem;
+            background: #ffe0e8;
+            padding: 8px 15px;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        /* Puisi Romantis */
+        .puisi-mesra {
+            background: #fff9fa;
+            border-radius: 48px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 20px rgba(180, 80, 100, 0.15);
+            border-left: 9px solid #ff698b;
+        }
+        .puisi-mesra h3 {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #b34262;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .puisi-teks {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            line-height: 1.75;
+            text-align: center;
+            color: #4a2c36;
+            background: rgba(255, 235, 240, 0.6);
+            border-radius: 42px;
+            padding: 1rem;
+            white-space: pre-line;
+        }
+
+        /* Ucapan spesial "Sayangku, aku cinta kamu" berulang dan mesra */
+        .spesial-ucapan {
+            background: linear-gradient(115deg, #ffe3ec, #ffd4e1);
+            border-radius: 48px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .spesial-ucapan p {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #b13255;
+            margin: 16px 0;
+            letter-spacing: 1px;
+        }
+        .spesial-ucapan i {
+            color: #f75c84;
+            margin: 0 8px;
+        }
+        .garis-cinta {
+            width: 70px;
+            height: 3px;
+            background: #ff8dab;
+            margin: 15px auto;
+            border-radius: 10px;
+        }
+
+        /* Tombol interaktif berikan ciuman virtual */
+        .btn-kiss {
+            background: #ff7496;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: white;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 10px 18px #ff749680;
+            margin: 0 auto 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            width: fit-content;
+        }
+        .btn-kiss:hover {
+            background: #e85c7f;
+            transform: scale(1.02);
+            box-shadow: 0 16px 26px #e85c7faa;
+        }
+        .kiss-message {
+            background: #fffbee;
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 44px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #c14669;
+            border: 1px solid #ffbbcf;
+            text-align: center;
+        }
+
+        /* footer mesra */
+        .footer-cinta {
+            background: #ffcdda;
+            padding: 1.2rem;
+            text-align: center;
+            color: #a13f5b;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 550px) {
+            .main-content {
+                padding: 1.4rem;
+            }
+            .mesra-header h1 {
+                font-size: 2.7rem;
+            }
+            .kata-cinta-besar {
+                font-size: 1.2rem;
+            }
+            .kata-cinta-besar .big-text {
+                font-size: 1.5rem;
+            }
+            .spesial-ucapan p {
+                font-size: 1.2rem;
+            }
+            .judul-mesra {
+                font-size: 1.5rem;
+            }
+        }
+        /* efek denyut di ikon love */
+        .heart-beat {
+            animation: pulseHeart 1s infinite;
+        }
+    </style>
+</head>
+<body>
+
+<div class="heart-rain" id="heartRainContainer"></div>
+
+<div class="love-card">
+    <div class="mesra-header">
+        <i class="fas fa-heart"></i>
+        <h1>Nayara <span>Panjani</span></h1>
+        <div class="sapaan">
+            <i class="fas fa-kiss-wink-heart"></i>  Bidadari hatiku  <i class="fas fa-kiss-wink-heart"></i>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <!-- ungkapan cinta yang sangat mesra: langsung -->
+        <div class="cinta-utama">
+            <div class="judul-mesra">
+                <i class="fas fa-feather-alt"></i>  Untukmu, Belahan Jiwaku  <i class="fas fa-dove"></i>
+            </div>
+            <div class="kata-cinta-besar">
+                <span class="big-text">✨</span> Sayangku <span class="big-text">❤️</span> Nayara Panjani, <br>
+                Aku Cinta Kamu <span class="big-text">💖</span> Aku Cinta Kamu <span class="big-text">🌹</span><br>
+                Dari ujung rambut sampai ujung kaki, aku jatuh cinta padamu <br>
+                <span style="font-size:1.6rem;">♥</span> Selamanya hanya Kamu <span style="font-size:1.6rem;">♥</span>
+            </div>
+            <div class="pelukan-virtual">
+                <i class="fas fa-hand-holding-heart"></i>  Peluk hangat untuk Nayara  <i class="fas fa-heart"></i>
+            </div>
+        </div>
+
+        <!-- Puisi mesra spesial -->
+        <div class="puisi-mesra">
+            <h3><i class="fas fa-moon"></i>  Puisi Dari Jantungku  <i class="fas fa-star"></i></h3>
+            <div class="puisi-teks">
+                🌙 Saat dunia terasa dingin, senyummu adalah mentari.<br>
+                Setiap kata "Aku Cinta Kamu" tak pernah cukup tuk menggambarkan<br>
+                betapa hariku berwarna karena namamu, Nayara.<br><br>
+                💞 Engkau laksana mimpi yang menjadi nyata, <br>
+                peluk erat jiwaku, jangan lepas sampai akhir waktu.<br>
+                Di setiap detak nadiku, kau adalah irama yang paling mesra.<br>
+                <i class="fas fa-heart" style="color:#e85c7f;"></i>  Aku sayang kamu, hari ini dan nanti.  <i class="fas fa-heart" style="color:#e85c7f;"></i>
+            </div>
+        </div>
+
+        <!-- Bagian khusus kata SAYANGKU, AKU CINTA KAMUUUU (dengan banyak pengulangan manis) -->
+        <div class="spesial-ucapan">
+            <i class="fas fa-comment-dots fa-2x" style="color:#e86186;"></i>
+            <p><strong><i class="fas fa-heartbeat"></i> Pesan Cinta Spesial <i class="fas fa-heartbeat"></i></strong></p>
+            <div class="garis-cinta"></div>
+            <p>💌 Sayangku... 💌<br>
+            <strong style="font-size:1.7rem;">“Aku Cinta Kamuuuu”</strong> ❤️‍🔥<br>
+            Setiap hembusan nafasku adalah namamu, Nayara Panjani. <br>
+            Aku cinta kamu lebih dari bintang di langit, lebih dalam dari samudra. <br>
+            <i class="fas fa-heart"></i>  Aku sayang kamu, aku cinta kamu, aku rindu kamu selalu.  <i class="fas fa-heart"></i>
+            </p>
+            <div class="garis-cinta"></div>
+            <p><i class="fas fa-kiss"></i>  Sayangku, aku cinta kamu sepenuh hati, tanpa batas dan tanpa ragu.  <i class="fas fa-kiss-wink-heart"></i></p>
+        </div>
+
+        <!-- Tombol interaktif "Ciuman Romantis" + pesan tersembunyi -->
+        <div style="display: flex; justify-content: center;">
+            <button class="btn-kiss" id="kissButton"><i class="fas fa-lips"></i> Kirim Ciuman & Cinta <i class="fas fa-grin-squint-tears"></i></button>
+        </div>
+        <div id="kissResponse" class="kiss-message" style="display: none;"></div>
+    </div>
+
+    <div class="footer-cinta">
+        <i class="fas fa-infinity"></i>  Untuk Nayara Panjani, cinta terindah di hidupku  <i class="fas fa-infinity"></i><br>
+        🌹 Setiap hari bersamamu adalah hadiah. Aku sayang kamu selamanya 🌹
+    </div>
+</div>
+
+<script>
+    // Fungsi membuat hujan hati yang sangat romantis
+    function createHeartRain() {
+        const container = document.getElementById('heartRainContainer');
+        const heartIcon = ['❤️', '💖', '💗', '💘', '💝', '🧡', '💕', '💞'];
+        const heartDiv = document.createElement('div');
+        heartDiv.classList.add('heart-drop');
+        const randomHeart = heartIcon[Math.floor(Math.random() * heartIcon.length)];
+        heartDiv.innerHTML = randomHeart;
+        const size = Math.random() * 24 + 16; // 16px - 40px
+        heartDiv.style.fontSize = size + 'px';
+        heartDiv.style.left = Math.random() * 100 + '%';
+        heartDiv.style.animationDuration = Math.random() * 6 + 5 + 's';
+        heartDiv.style.animationDelay = Math.random() * 4 + 's';
+        heartDiv.style.opacity = Math.random() * 0.7 + 0.3;
+        container.appendChild(heartDiv);
+        setTimeout(() => {
+            heartDiv.remove();
+        }, 10000);
+    }
+    setInterval(createHeartRain, 500);
+
+    // Tombol ciuman + pesan mesra
+    const kissBtn = document.getElementById('kissButton');
+    const kissResp = document.getElementById('kissResponse');
+    let kissCount = 0;
+    kissBtn.addEventListener('click', () => {
+        kissCount++;
+        const romantisMsg = [
+            "💋 *MUAH* 💋 Sayangku Nayara, aku kirimkan ciuman terhangat untukmu! Hatiku berdebar setiap kali memikirkanmu. Aku cinta kamu! ❤️",
+            "😘 Ciuman manis untuk bidadariku! Kamu adalah alasan senyumku setiap hari. Aku sayang kamu, aku cinta kamu selalu! 💕",
+            "🌹 *smuaach* 🌹 Sayang, kamu membuat dunianku berwarna. Jangan pernah ragu bahwa aku sangat mencintaimu. Aku cinta kamuuuuu! 💖",
+            "💏 Ciuman dalam doa, sayangku Nayara. Kamu tak tergantikan. I love you more than words can tell. 💗",
+            "❤️‍🔥 Bidadari hatiku... terimalah ciuman ini sebagai tanda cinta yang tak pernah pudar. Aku cinta kamu, hanya kamu."
+        ];
+        const randomIndex = (kissCount - 1) % romantisMsg.length;
+        const selectedMsg = romantisMsg[randomIndex] + `<br><i class="fas fa-heart" style="color:#e85c7f; margin-top:8px; display:inline-block;"></i>  Untuk Nayara Panjani tercinta  <i class="fas fa-heart"></i>`;
+        kissResp.style.display = 'block';
+        kissResp.innerHTML = selectedMsg;
+        // efek tambahan: membuat hati besar sebentar
+        const fakeHeart = document.createElement('div');
+        fakeHeart.innerHTML = '💖';
+        fakeHeart.style.position = 'fixed';
+        fakeHeart.style.left = '50%';
+        fakeHeart.style.top = '40%';
+        fakeHeart.style.fontSize = '70px';
+        fakeHeart.style.transform = 'translate(-50%, -50%)';
+        fakeHeart.style.opacity = '0.8';
+        fakeHeart.style.pointerEvents = 'none';
+        fakeHeart.style.zIndex = '999';
+        fakeHeart.style.transition = 'all 0.8s ease';
+        document.body.appendChild(fakeHeart);
+        setTimeout(() => {
+            fakeHeart.style.opacity = '0';
+            fakeHeart.style.transform = 'translate(-50%, -50%) scale(2)';
+            setTimeout(() => fakeHeart.remove(), 800);
+        }, 100);
+        // sedikit getaran tombol cinta
+        kissBtn.style.transform = 'scale(0.98)';
+        setTimeout(() => { kissBtn.style.transform = ''; }, 150);
+    });
+
+    // Efek tambahan: kata "Aku cinta kamu" bergerak dan muncul saat halaman dimuat
+    const semuaCinta = document.querySelectorAll('.kata-cinta-besar, .spesial-ucapan p');
+    const originalTexts = [];
+    // tidak merusak teks asli, hanya menambahkan animasi lembut
+    const showLoveConfetti = () => {
+        console.log("Love for Nayara Panjani forever");
+    };
+    window.addEventListener('load', () => {
+        showLoveConfetti();
+        // tambahkan sapaan manis kecil di console (optional)
+        console.log("%c❤️ NAYARA PANJANI, KAMU ADALAH CINTA TERINDAH ❤️", "color: #e85c7f; font-size: 16px; font-weight: bold;");
+    });
+</script>
+</body>
+</html>
+```
